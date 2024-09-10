@@ -2,32 +2,38 @@
 Architecture and unit tests for banking products
 bank-products-architecture/
 │
-├── .gitignore
-├── pom.xml
-├── README.md
+├── .gitignore               # Git ignore file
+├── pom.xml                  # Maven configuration file
+├── README.md                # Git ignore file
 ├── src
 │   ├── main
 │   │   └── java
 │   │       └── com
 │   │           └── bank
-│   │               ├── BankProduct.java       // Интерфейс для всех продуктов
-│   │               ├── Card.java              // Абстрактный класс для карт
-│   │               ├── CreditCard.java        // Класс для кредитной карты
-│   │               ├── DebitCard.java         // Класс для дебетовой карты
-│   │               ├── CurrencyDebitCard.java // Класс для валютной дебетовой карты
-│   │               ├── Deposit.java           // Абстрактный класс для депозитов
-│   │               ├── FixedDeposit.java      // Класс для фиксированного вклада
-│   │               ├── RecurringDeposit.java  // Класс для пополняемого вклада
-│   │               ├── BankProductCreator.java // Фабрика для создания продуктов
-│   │               └── BankApplication.java   // Главный класс для демонстрации
+│   │               ├── base
+│   │               │   └── BankProduct.java        # Interface for all products
+│   │               ├── cards
+│   │               │   ├── Card.java               # Abstract class for cards
+│   │               │   ├── CreditCard.java         # Class for credit card
+│   │               │   ├── DebitCard.java          # Class for debit card
+│   │               │   └── CurrencyDebitCard.java  # Class for currency debit card
+│   │               ├── deposits
+│   │               │   ├── Deposit.java            # Abstract class for deposits
+│   │               │   ├── FixedDeposit.java       # Class for fixed deposit
+│   │               │   └── RecurringDeposit.java   # Class for recurring deposit
+│   │               ├── util
+│   │               │   └── BankProductCreator.java # Factory for creating products
+│   │               └── BankApplication.java        # Main class for demonstration
 │   
 │   └── test
 │       └── java
 │           └── com
 │               └── bank
-│                   ├── CreditCardTest.java    // Юнит-тесты для кредитной карты
-│                   ├── DebitCardTest.java     // Юнит-тесты для дебетовой карты
-│                   ├── CurrencyDebitCardTest.java // Юнит-тесты для валютной дебетовой карты
-│                   ├── FixedDepositTest.java  // Юнит-тесты для фиксированного вклада
-│                   ├── RecurringDepositTest.java // Юнит-тесты для пополняемого вклада
-│                   └── BankApplicationTest.java // Тесты для всей системы
+│                   ├── cards
+│                   │   ├── CreditCardTest.java        # Unit tests for credit card
+│                   │   ├── DebitCardTest.java         # Unit tests for debit card
+│                   │   └── CurrencyDebitCardTest.java # Unit tests for currency debit card
+│                   ├── deposits
+│                   │   ├── FixedDepositTest.java      # Unit tests for fixed deposit
+│                   │   └── RecurringDepositTest.java  # Unit tests for recurring deposit
+│                   └── BankApplicationTest.java       # Tests for the entire system
