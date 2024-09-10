@@ -1,0 +1,38 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BankProductTests">
+  <!-- Группа для позитивных тестов -->
+  <test name="PositiveTests">
+    <groups>
+      <run>
+        <include name="positive"/>
+      </run>
+    </groups>
+    <classes>
+      <!-- Тесты для карт -->
+      <class name="com.bank.cards.CreditCardTest"/>
+      <class name="com.bank.cards.DebitCardTest"/>
+      <class name="com.bank.cards.CurrencyDebitCardTest"/>
+      <!-- Тесты для депозитов -->
+      <class name="com.bank.deposits.FixedDepositTest"/>
+      <class name="com.bank.deposits.RecurringDepositTest"/>
+    </classes>
+  </test>
+
+  <!-- Группа для негативных тестов -->
+  <test name="NegativeTests">
+    <groups>
+      <run>
+        <include name="negative"/>
+      </run>
+    </groups>
+    <classes>
+      <!-- Тесты для карт -->
+      <class name="com.bank.cards.CreditCardTest"/>
+      <class name="com.bank.cards.DebitCardTest"/>
+      <class name="com.bank.cards.CurrencyDebitCardTest"/>
+      <!-- Тесты для депозитов -->
+      <class name="com.bank.deposits.FixedDepositTest"/>
+      <class name="com.bank.deposits.RecurringDepositTest"/>
+    </classes>
+  </test>
+</suite>

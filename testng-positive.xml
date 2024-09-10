@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BankProductPositiveTests">
+  <!-- Group for positive tests -->
+  <test name="PositiveTests">
+    <groups>
+      <run>
+        <include name="positive"/>
+      </run>
+    </groups>
+    <classes>
+      <!-- Test classes for positive cases -->
+      <class name="com.bank.cards.CreditCardTest"/>
+      <class name="com.bank.cards.DebitCardTest"/>
+      <class name="com.bank.cards.CurrencyDebitCardTest"/>
+      <class name="com.bank.deposits.FixedDepositTest"/>
+      <class name="com.bank.deposits.RecurringDepositTest"/>
+    </classes>
+  </test>
+</suite>
